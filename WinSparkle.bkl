@@ -33,11 +33,14 @@ vs2012.option.Configuration.PlatformToolset = v110_xp;
 vs2013.option.Configuration.PlatformToolset = v120_xp;
 vs2015.option.Configuration.PlatformToolset = v140_xp;
 // However, VS2017 can be treated like a modern platform
-vs2015.option.Configuration.PlatformToolset = v141;
+vs2017.option.Configuration.PlatformToolset = v141;
 
 // VS2015 generates thread-safe statics by default, but it's incompatible with
 // Windows XP when used in DLLs
 if ( $toolset == vs2015 ) {
+    compiler-options += "/Zc:threadSafeInit-";
+}
+if ( $toolset == vs2017 ) {
     compiler-options += "/Zc:threadSafeInit-";
 }
 
