@@ -2,7 +2,7 @@
 toolsets = vs2008 vs2010 vs2012 vs2013 vs2015 vs2017;
 
 if ( $toolset == vs2008 )
-    SUFFIX = "";
+    SUFFIX = "-2008";
 if ( $toolset == vs2010 )
     SUFFIX = "-2010";
 if ( $toolset == vs2012 )
