@@ -1,0 +1,17 @@
+version: 1.0.{build}
+image:
+- Visual Studio 2017
+clone_depth: 5
+before_build:
+- cmd: >-
+    nuget restore WinSparkle-2017.sln
+    git submodule update --init --recursive
+platform:
+  - Win32
+  - x64
+configuration:
+  - Debug
+  - Release
+build:
+  project: WinSparkle-2017.sln
+  parallel: true
