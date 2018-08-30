@@ -1,7 +1,7 @@
 About
 -------
 
-This is a fork of the WinSparkle project by vslavik, specifically to
+This is an unauthorized fork of the WinSparkle project by vslavik, specifically to
 support Visual Studio 2017.  This project may be useful for those who wish
 to do source-level debugging or improvement on the WinSparkle libraries,
 while using a modern development environment.
@@ -13,10 +13,8 @@ updates format (appcasts) and having very similar user interface.
 
 The WinSparkle build environment depends on numerous third party
 libraries, including but not limited to wxWindows, openssl, openssl-windows,
-expat, and a bunch of other stuff written by vslavik.  It also depends
-on bakefile, which is a utility also written by vslavik.  Unfortunately, he stopped
-developing these projects in about 2016, and thus they don't support
-VS2017 correctly.
+and expat.  It also depends on bakefile, which is a utility also written by
+vslavik.
 
 Bakefile itself doesn't have a sufficiently modern build of itself to
 run correctly on Windows.  So, I ran Bakefile from sources on Linux, and
@@ -33,10 +31,11 @@ Check the sources out and initialize the submodules:
 
     $ git clone git://github.com/johnwbyrd/winsparkle.git
     $ cd winsparkle
+    $ nuget restore WinSparkle-2017.sln
     $ git submodule update --init --recursive
 
-To compile the library, just open `WinSparkle2017.sln` solution and build it from within
-Visual Studio 2017.
+To compile the library, just open `WinSparkle-2017.sln` solution and build it from within
+Visual Studio 2017, or use the msbuild.exe command from a Visual Studio command prompt.
 
  DSA signatures
 ---------------
