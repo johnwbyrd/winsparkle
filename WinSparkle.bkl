@@ -1,5 +1,5 @@
 
-toolsets = vs2008 vs2010 vs2012 vs2013 vs2015 vs2017;
+toolsets = vs2008 vs2010 vs2012 vs2013 vs2015 vs2017 vs2019;
 
 if ( $toolset == vs2008 )
     SUFFIX = "-2008";
@@ -13,6 +13,8 @@ if ( $toolset == vs2015 )
     SUFFIX = "-2015";
 if ( $toolset == vs2017 )
     SUFFIX = "-2017";
+if ( $toolset == vs2019 )
+    SUFFIX = "-2019";
 
 vs2008.solutionfile = WinSparkle$(SUFFIX).sln;
 vs2010.solutionfile = WinSparkle$(SUFFIX).sln;
@@ -20,6 +22,7 @@ vs2012.solutionfile = WinSparkle$(SUFFIX).sln;
 vs2013.solutionfile = WinSparkle$(SUFFIX).sln;
 vs2015.solutionfile = WinSparkle$(SUFFIX).sln;
 vs2017.solutionfile = WinSparkle$(SUFFIX).sln;
+vs2019.solutionfile = WinSparkle$(SUFFIX).sln;
 
 // Common settings:
 win32-crt-linkage = static;
@@ -34,6 +37,7 @@ vs2013.option.Configuration.PlatformToolset = v120_xp;
 vs2015.option.Configuration.PlatformToolset = v140_xp;
 // However, VS2017 can be treated like a modern platform
 vs2017.option.Configuration.PlatformToolset = v141;
+vs2017.option.Configuration.PlatformToolset = v142;
 
 // VS2015 generates thread-safe statics by default, but it's incompatible with
 // Windows XP when used in DLLs
@@ -106,6 +110,16 @@ if ( $(config) == Release ) {
     vs2017.option.Link.OptimizeReferences = true;
     vs2017.option.Link.EnableCOMDATFolding = true;
     vs2017.option.Link.LinkTimeCodeGeneration = UseLinkTimeCodeGeneration;
+    
+    vs2019.option.Configuration.WholeProgramOptimization = true;
+    vs2019.option.ClCompile.Optimization = MinSpace;
+    vs2019.option.ClCompile.FavorSizeOrSpeed = Size;
+    vs2019.option.ClCompile.WholeProgramOptimization = true;
+    vs2019.option.ClCompile.StringPooling = true;
+    vs2019.option.ClCompile.FunctionLevelLinking = true;
+    vs2019.option.Link.OptimizeReferences = true;
+    vs2019.option.Link.EnableCOMDATFolding = true;
+    vs2019.option.Link.LinkTimeCodeGeneration = UseLinkTimeCodeGeneration;
 }
 
 // 3rd party library dependencies:
@@ -119,6 +133,7 @@ shared-library WinSparkle {
     vs2013.projectfile = $(id)$(SUFFIX).vcxproj;
     vs2015.projectfile = $(id)$(SUFFIX).vcxproj;
     vs2017.projectfile = $(id)$(SUFFIX).vcxproj;
+    vs2019.projectfile = $(id)$(SUFFIX).vcxproj;
 
     defines += XML_STATIC;
     includedirs += 3rdparty/expat/expat/lib;

@@ -17,90 +17,64 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\winsparkle.h">
+    <ClInclude Include="expat\expat\lib\ascii.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\winsparkle-version.h">
+    <ClInclude Include="expat\expat\lib\asciitab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\appcast.h">
+    <ClInclude Include="expat\expat\lib\expat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\appcontroller.h">
+    <ClInclude Include="expat\expat\lib\expat_external.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\download.h">
+    <ClInclude Include="expat\expat\lib\iasciitab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\error.h">
+    <ClInclude Include="expat\expat\lib\internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\settings.h">
+    <ClInclude Include="expat\expat\lib\latin1tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\threads.h">
+    <ClInclude Include="expat\expat\lib\nametab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ui.h">
+    <ClInclude Include="expat\expat\lib\utf8tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\updatechecker.h">
+    <ClInclude Include="expat\expat\lib\winconfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\updatedownloader.h">
+    <ClInclude Include="expat\expat\lib\xmlrole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\utils.h">
+    <ClInclude Include="expat\expat\lib\xmltok.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\signatureverifier.h">
+    <ClInclude Include="expat\expat\lib\xmltok_impl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\appcast.cpp">
+    <ClCompile Include="expat\expat\lib\loadlibrary.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\appcontroller.cpp">
+    <ClCompile Include="expat\expat\lib\xmlparse.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\dll_api.cpp">
+    <ClCompile Include="expat\expat\lib\xmlrole.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\dllmain.cpp">
+    <ClCompile Include="expat\expat\lib\xmltok.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\download.cpp">
+    <ClCompile Include="expat\expat\lib\xmltok_impl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\error.cpp">
+    <ClCompile Include="expat\expat\lib\xmltok_ns.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\settings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\threads.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ui.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\updatechecker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\updatedownloader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\signatureverifier.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="src\winsparkle.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="translations\translations.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>
