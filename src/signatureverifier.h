@@ -27,6 +27,7 @@
 #define _signatureverifier_h_
 
 #include <exception>
+#include <stdexcept>
 #include <string>
 
 namespace winsparkle
