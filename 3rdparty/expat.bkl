@@ -7,6 +7,7 @@ vs2012.generate-solution = false;
 vs2013.generate-solution = false;
 vs2015.generate-solution = false;
 vs2017.generate-solution = false;
+vs2019.generate-solution = false;
 
 library WinSparkle_expat : t_3rdparty {
     vs2008.projectfile = ../../../expat$(SUFFIX).vcproj;
@@ -15,6 +16,7 @@ library WinSparkle_expat : t_3rdparty {
     vs2013.projectfile = ../../../expat$(SUFFIX).vcxproj;
     vs2015.projectfile = ../../../expat$(SUFFIX).vcxproj;
     vs2017.projectfile = ../../../expat$(SUFFIX).vcxproj;
+    vs2019.projectfile = ../../../expat$(SUFFIX).vcxproj;
 
     defines += COMPILING_FOR_WINDOWS;
 
